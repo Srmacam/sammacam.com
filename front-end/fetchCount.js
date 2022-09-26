@@ -1,4 +1,4 @@
-let vc = 'https://ova8kj3285.execute-api.us-west-1.amazonaws.com/Prod/counter'
+let vc = "https://ntvyl8vvpe.execute-api.us-west-1.amazonaws.com/Prod/counter"
 
 updateVisitCount();
 

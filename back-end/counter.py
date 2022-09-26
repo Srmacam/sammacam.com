@@ -21,14 +21,14 @@ def handler(event, context):
 
     # Increment value in table by 1
     response = table.update_item(
-        Key={"Site": 0},
-        UpdateExpression='ADD ' + "Visits" + ' :incr',
-        ExpressionAttributeValues={':incr': 1}
+        Key = {"Site": 0},
+        UpdateExpression = "ADD Visits :incr",
+        ExpressionAttributeValues = {':incr': 1}
     )
 
     # Return HTTP request
     return {
         'statusCode': 200,
-        'headers': { "Access-Control-Allow-Origin": "https://sammacam.com" },
+        'headers': { "Access-Control-Allow-Origin": "*" },
         'body': get_count()
     }
