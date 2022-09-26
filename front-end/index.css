@@ -72,6 +72,10 @@ li {
     font-style: italic;
 }
 
+.description {
+    margin: 10px 0;
+}
+
 .inline-text {
     display: flex;
     justify-content: left;
