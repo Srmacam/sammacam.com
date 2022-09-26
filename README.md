@@ -7,3 +7,4 @@ The cloud resume challenge utilizes a variety of AWS tools to create:
 - An SSL certificate generated with AWS Certificate Manager to serve the site over HTTPS
 - A CDN using AWS CloudFront for faster content delivery
 - A visitor counter stored on a DynamoDB database, accessed using AWS API Gateway, and incremented using a python function with AWS Lambda
+- Provisioned the DynamoDB database, API Gateway, and Lambda function via AWS Serverless Application Model (SAM) CLI
