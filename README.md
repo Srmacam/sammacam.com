@@ -1,7 +1,5 @@
-# sammacam.com
+# [sammacam.com](https://sammacam.com)
 Static website created for the cloud resume challenge by Forrest Brazeal.
-
-The website can be accessed at [sammacam.com](https://sammacam.com)
 
 The cloud resume challenge utilizes a variety of AWS tools to create:
 - A static website using HTML/CSS hosted via S3.
