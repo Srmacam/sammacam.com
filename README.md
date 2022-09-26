@@ -8,3 +8,4 @@ The cloud resume challenge utilizes a variety of AWS tools to create:
 - A CDN using AWS CloudFront for faster content delivery
 - A visitor counter stored on a DynamoDB database, accessed using AWS API Gateway, and incremented using a python function with AWS Lambda
 - Provisioned the DynamoDB database, API Gateway, and Lambda function via AWS Serverless Application Model (SAM) CLI
+- Utilized GitHub Actions to automatically push the main branch to the S3 bucket hosting the static website
