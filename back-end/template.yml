@@ -1,0 +1,43 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+
+Globals:
+  Function:
+    Runtime: python3.8
+
+Resources:
+  CounterAPI:
+    Type: AWS::Serverless::Api
+    Properties:
+      StageName: Prod
+      Cors:
+        AllowMethods: "'GET,PATCH,POST,PUT,DELETE,HEAD,OPTIONS'"
+        AllowHeaders: "'content-type'"
+        AllowOrigin: "'*'"
+    
+  Counter:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: counter.handler
+      Policies: AmazonDynamoDBFullAccess
+      Events:
+        HttpGet:
+          Type: Api
+          Properties:
+            RestApiId: !Ref CounterAPI
+            Path: '/counter'
+            Method: get
+
+  MacamResumeCounterDB:
+    Type: AWS::DynamoDB::Table
+    Properties: 
+      AttributeDefinitions: 
+        - AttributeName: "Site"
+          AttributeType: "N"
+      KeySchema:
+        - AttributeName: "Site"
+          KeyType: "HASH"
+      ProvisionedThroughput:
+        ReadCapacityUnits: 1
+        WriteCapacityUnits: 1
+      TableName: "macamresumecounter"
