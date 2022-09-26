@@ -22,6 +22,10 @@ ul {
     margin: 3px 0 0 0;
 }
 
+li {
+    padding-bottom: 3px;
+}
+
 .resume {
     max-width: 850px;
     margin: 40px auto;
@@ -33,6 +37,7 @@ ul {
 .date-grid {
     display: flex;
     justify-content: space-between;
+    
 }
 
 .main-title {
@@ -56,6 +61,11 @@ ul {
 
 .item-title {
     font-weight: bold;
+}
+
+.item-date {
+    font-weight: bold;
+    font-style: italic;
 }
 
 .caption {
@@ -88,20 +98,28 @@ ul {
 }
 
 @media only screen and (max-width:768px){
+    
     body {
         font-size: 17px;
     }
 
+    li {
+        padding-bottom: 5px;
+    }
+
+    .counter {
+        font-size: 14px;
+    }
+
     .center-inline-text {
         flex-direction: column;
-        padding: 0 5px 5px 20px;
+    }
+
+    .date-grid {
+        flex-direction: column;
     }
 
     .inline-links {
         margin-left: 0;
     }
-
-    .counter {
-        font-size: 13px;
-    }
-  }
+}
