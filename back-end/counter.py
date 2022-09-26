@@ -1,9 +1,6 @@
 import boto3
 import json
 
-def update_table(table, key, col):
-    return 0
-
 def get_count():
     db = boto3.resource("dynamodb")
     table = db.Table("macamresumecounter")
