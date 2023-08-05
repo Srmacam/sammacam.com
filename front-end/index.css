@@ -1,12 +1,12 @@
 body {
-    min-height: 100%;
+    min-height: 100vh;
     font-size: 18px;
     font-family: 'Calibri', sans-serif;
     color: #323232;
 }
 
 hr {
-    height: 2px;
+    line-height: 2px;
     border-width: 0;
     margin-top: 0;
     margin-bottom: 5px;
@@ -34,7 +34,7 @@ a:visited {
     max-width: 850px;
     margin: 40px auto;
     padding: 55px;
-    background: white;
+    background: #fbfbfb;
     box-shadow: 0 1px 2px;
 }
 
@@ -105,7 +105,8 @@ a:visited {
     font-size: 16px;
 }
 
-@media only screen and (max-width:768px){
+/* Avoiding incorrect wrapping for contact links */
+@media only screen and (max-width:790px){
     
     body {
         font-size: 17px;
@@ -129,5 +130,9 @@ a:visited {
 
     .inline-links {
         margin-left: 0;
+    }
+
+    .resume {
+        padding: 25px;
     }
 }
