@@ -1,8 +1,31 @@
+.main-title {
+    text-align: left;
+    font-size: 2em;
+
+    /* margin-bottom: 5px, rest 0px; */
+    margin: 0 0 5px 0;
+}
+
 body {
     min-height: 100vh;
-    font-size: 18px;
+    font-size: 1em;
     font-family: 'Calibri', sans-serif;
     color: #323232;
+}
+
+.inline-text {
+    display: flex;
+    flex-direction: column;
+    padding-right: 5px;
+    padding-bottom: 10px;
+}
+
+.center-inline-text {
+    display: block;
+}
+
+.inline-items {
+    margin-left: 1em;
 }
 
 hr {
@@ -23,7 +46,7 @@ ul {
 }
 
 li {
-    padding-bottom: 3px;
+    padding-bottom: 5px;
 }
 
 a:visited {
@@ -31,34 +54,20 @@ a:visited {
 }
 
 .resume {
-    max-width: 850px;
-    margin: 40px auto;
-    padding: 55px;
-    background: #fbfbfb;
-    box-shadow: 0 1px 2px;
+    padding: 20px;
 }
 
 .date-grid {
-    display: flex;
-    justify-content: space-between;
-    
-}
-
-.main-title {
-    text-align: center;
-    font-size: 28px;
-    margin: 0 0 5px 0;
+    display: block;
 }
 
 .icon {
     height: 0.7em;
 }
 
-
-
 .header {
     text-align: left;
-    font-size: 18px;
+    font-size: 1.25em;
     font-weight: bold;
     margin: 0;
 }
@@ -80,59 +89,46 @@ a:visited {
     margin: 10px 0;
 }
 
-.inline-text {
-    display: flex;
-    justify-content: left;
-    padding: 0 5px 5px 0;
-}
-
-.center-inline-text {
-    display: flex;
-    justify-content: center;
-    overflow-wrap: normal;
-}
-
-.inline-items {
-    margin-left: 5px;
-}
-
-.inline-links {
-    margin-left: 15px;
-}
-
 .counter {
     text-align: center;
-    font-size: 16px;
+    font-size: 0.8em;
 }
 
-/* Avoiding incorrect wrapping for contact links */
-@media only screen and (max-width:790px){
+/* Desktop layout */
+@media only screen and (min-width:790px){
     
     body {
-        font-size: 17px;
+        font-size: 1.1em;
     }
 
     li {
-        padding-bottom: 5px;
+        padding-bottom: 3px;
     }
 
-    .counter {
-        font-size: 14px;
+    .main-title {
+        text-align: center;
     }
 
     .center-inline-text {
-        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        padding: 0 5px 5px 0;
     }
 
     .date-grid {
-        flex-direction: column;
+        display: flex;
+        justify-content: space-between;
     }
 
     .inline-links {
-        margin-left: 0;
+        margin-left: 15px;
     }
 
     .resume {
-        padding: 25px;
+        max-width: 850px;
+        margin: 40px auto;
+        padding: 55px;
+        background: #fbfbfb;
+        box-shadow: 0 1px 2px;
     }
 }
